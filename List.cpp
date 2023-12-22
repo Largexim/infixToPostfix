@@ -84,7 +84,12 @@ void List::insert(const char& input){
 
     p->data = input;
 }
-
+void List::insert(const int& index,const string& input){
+    node* p = head;
+    for(int i=0 ; i<index ; i++)
+        p=p->next;
+    p->data = input;
+}
 string List::pop(){
     if(length==1){
         string returning = head->data;

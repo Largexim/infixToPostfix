@@ -20,7 +20,7 @@ public:
     void append(const char&);
     void insert(const string&);
     void insert(const char&);
-    //void insert(const int&,const string&);
+    void insert(const int&,const string&);
     //void insert(const int&,const char&);
     string pick();
     string pickFromDown();

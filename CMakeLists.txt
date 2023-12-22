@@ -1,6 +1,12 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.0)
+
 project(List)
 
-set(CMAKE_CXX_STANDARD 17)
+# Find SFML
+find_package(SFML 2.5 COMPONENTS graphics REQUIRED)
 
-add_executable(List main.cpp List.h List.cpp)
+# Add your executable
+add_executable(List main.cpp List.cpp)
+
+# Link SFML libraries to your executable
+target_link_libraries(List sfml-graphics)
